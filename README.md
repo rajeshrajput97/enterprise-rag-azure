@@ -1,5 +1,7 @@
 # enterprise-rag-azure
 
+[![CI](https://github.com/rajeshrajput97/enterprise-rag-azure/actions/workflows/ci.yml/badge.svg)](https://github.com/rajeshrajput97/enterprise-rag-azure/actions/workflows/ci.yml)
+
 A small, runnable retrieval-augmented generation (RAG) reference implementation. It covers document chunking, embeddings, in-memory retrieval, prompt assembly, and a FastAPI query endpoint.
 
 The embedding and chat clients are pluggable: **Azure OpenAI**, **OpenAI**, or a **local stub** so the pipeline and tests run fully offline. This is a teaching and interview-friendly skeleton, not a production service.
@@ -93,7 +95,7 @@ pip install -r requirements.txt
 pytest -q
 ```
 
-Tests always use the stub provider and do not make network calls.
+Tests always use the stub provider and do not make network calls. The same command runs in GitHub Actions on every push to `main`.
 
 ## License
 
